@@ -1,6 +1,10 @@
-We love beer.
-And beer is good.
+========================================================
+iPad app that finds local Breweries based on GeoLocation
+========================================================
 
-And the Lord said, this is Good.
+-- Also, search allows user to choose location to browse
+-- breweries and their beers 
+-- Cheers
 
-'Merica, bitches.
+========================================================
+========================================================
