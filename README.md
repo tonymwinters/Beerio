@@ -1,4 +1,6 @@
-Beerio
-======
+We love beer.
+And beer is good.
 
-Find Local Breweries by GeoLocation
+And the Lord said, this is Good.
+
+'Merica, bitches.
