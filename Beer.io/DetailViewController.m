@@ -25,6 +25,7 @@ GMSMapView *mapView_;
 
 
 
+
 - (void)configureView
 {
     mapView_.delegate = self;
@@ -93,47 +94,33 @@ GMSMapView *mapView_;
         marker.snippet =  [NSString stringWithFormat:@"%@  -   %@   - %@", phone, web, desc];
         marker.map = mapView_;
         marker.userData = [location objectForKey: @"id"];
-        NSLog(marker.userData);
         
         
        
     }
-    
-    
-    
-    
-    
-  
-    
+
     [super viewDidLoad];
-    
-    
-	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
-   
-    
+
 }
 
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)wayUberButton:(id)sender {
-    NSLog(@"merica");
-    NSLog(sender);
+
     [self performSegueWithIdentifier:(@"getDetails") sender:sender];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
+
     if ([segue.identifier isEqualToString:@"getDetails"]) {
         BreweryDetailsViewController *destController = segue.destinationViewController;
         destController.breweryId = sender;
-        
-         
+
     }
-         }
+}
 @end

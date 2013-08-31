@@ -14,6 +14,7 @@
 - (void)setBreweryId:(NSString *)breweryIdHa;
 
 @property (nonatomic, strong) NSString *breweryId;
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 
 

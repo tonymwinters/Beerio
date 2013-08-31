@@ -7,6 +7,7 @@
 //
 
 #import "BreweryDetailsViewController.h"
+#import "BeerDetailViewController.h"
 
 @interface BreweryDetailsViewController ()
 
@@ -14,11 +15,8 @@
 
 @implementation BreweryDetailsViewController
 @synthesize breweryId;
+@synthesize tableView;
 NSArray *recipes;
-
-
-
-
 
 
 - (void)viewDidLoad
@@ -46,11 +44,7 @@ NSArray *recipes;
         [beers addObject:beer];
     }
     
-	// Do any additional setup after loading the view.
     recipes = beers;
-   
-    
-    
 }
 
 
@@ -81,6 +75,16 @@ NSArray *recipes;
                             [NSData dataWithContentsOfURL:
                              [NSURL URLWithString: img]]];
     return cell;
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showBeer"]) {
+
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        BeerDetailViewController *destController = segue.destinationViewController;
+        destController.beer = [recipes objectAtIndex:indexPath.row];
+    }
 }
 
 

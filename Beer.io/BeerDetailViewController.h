@@ -11,5 +11,8 @@
 @interface BeerDetailViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *beerNameLabel;
 @property (nonatomic, strong) NSString *beerName;
+@property (nonatomic, strong) NSDictionary *beer;
+@property (weak, nonatomic) IBOutlet UIImageView *beerImage;
+@property (weak, nonatomic) IBOutlet UITextView *beerDescription;
 
 @end
